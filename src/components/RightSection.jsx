@@ -2,8 +2,9 @@ import React from 'react';
 
 const RightSection = () => {
     return (
-        <section>
+        <section className='right'>
             <div className="work-experience">
+                <h2>WORK EXPERIENCE</h2>
                 <div className="work-info">
                     <h3>Lorem ipsum.</h3>
                     <h4>Lorem ipsum.</h4>

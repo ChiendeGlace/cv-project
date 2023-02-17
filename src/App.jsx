@@ -1,23 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Header from './Hader';
-import LeftSection from './LeftSection';
-import RightSection from './RightSection';
+import Header from './components/Hader';
+import LeftSection from './components/LeftSection';
+import RightSection from './components/RightSection';
+import './app.scss';
 
 const App = () => {
     return (
-        <div>
+        <div className='app'>
             <Header
-                photoSource={'./../../public/man.jpg'}
-                fullName="John Doe"
-                position="Front-end web developer"
+                photoSource={'./../../public/man-image.jpg'}
+                fullName="JOHN DOE"
+                position="FRONT-END DEVELOPER"
                 skills={[
                     'HTML/CSS',
-                    'Python',
-                    'JavaScript',
-                    'React',
-                    'Photoshop',
-                    'MongoDB',
+                    'PYTHON',
+                    'JAVASCRIPT',
+                    'REACT',
+                    'PHOTOSHOP',
+                    'MONGODB',
                 ]}
             />
             <LeftSection />

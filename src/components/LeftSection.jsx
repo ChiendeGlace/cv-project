@@ -2,7 +2,7 @@ import React from 'react';
 
 const LeftSection = () => {
     return (
-        <section>
+        <section className='left'>
             <div className="about">
                 <div className="header-div">
                     <h2>ABOUT ME</h2>
@@ -10,9 +10,7 @@ const LeftSection = () => {
                 <p className="about-info">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Praesent dignissim nisi vitae dictum vehicula. Praesent
-                    placerat leo at libero posuere finibus. Fusce mattis dui
-                    eget laoreet tristique. Mauris turpis ex, cursus vel dictum
-                    eu, egestas vel leo.
+                    placerat leo at libero posuere finibus.
                 </p>
             </div>
             <div className="education">
@@ -31,11 +29,7 @@ const LeftSection = () => {
                         Lorem ipsum dolor, sit amet consectetur adipisicing
                         elit. Cumque expedita numquam corporis sit quos quisquam
                         itaque omnis. Sequi quo est ipsum quos, tempore fugit
-                        minima dolorum, in dolore, asperiores porro. Ducimus
-                        vitae voluptas corrupti laborum magnam enim animi alias
-                        numquam pariatur odit tenetur quaerat iure, ab vero
-                        porro expedita quis, nisi minima repellendus. Quam
-                        distinctio, quisquam itaque voluptates autem totam!
+                        minima dolorum, in dolore, asperiores porro.
                     </p>
                 </div>
                 <div className="content-div">
@@ -51,11 +45,7 @@ const LeftSection = () => {
                         Placeat maxime, eveniet quibusdam aspernatur quisquam
                         obcaecati eaque numquam vero in ducimus deserunt neque
                         omnis inventore impedit ea optio natus, repellendus
-                        ratione? Aspernatur animi esse quos voluptas quas
-                        facilis at repudiandae magnam veniam dolorem facere
-                        dolores quibusdam eos soluta minus fugiat saepe quaerat
-                        quidem dolor, repellendus optio iusto molestiae. Nemo,
-                        est eveniet.
+                        ratione? 
                     </p>
                 </div>
                 <div className="content-div">
@@ -71,11 +61,7 @@ const LeftSection = () => {
                         elit. Pariatur sapiente labore soluta consequuntur!
                         Suscipit excepturi quaerat repellendus nemo dignissimos
                         accusamus! Sed, nobis? Sunt, officia reiciendis ab
-                        incidunt laudantium illo veniam. Corrupti voluptatibus
-                        porro maxime et adipisci eaque, amet explicabo cumque
-                        veniam provident, possimus asperiores? Nulla voluptatum,
-                        amet architecto debitis omnis deleniti cumque unde ipsa
-                        asperiores doloribus tenetur fugiat velit ducimus?
+                        incidunt laudantium illo veniam. 
                     </p>
                 </div>
             </div>
