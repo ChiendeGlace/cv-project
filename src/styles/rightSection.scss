@@ -4,10 +4,9 @@
     padding: 0em 4em 2em 1em;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 32px;
     h2 {
         font-size: 1.25rem;
-        margin-bottom: 8px;
     }
     h3 {
         font-size: 1.115rem;
@@ -19,15 +18,26 @@
         h4 {
             font-weight: 600;
         }
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
     }
     .work-experience {
         h4 {
             font-weight: 600;
         }
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
         .content-div {
             display: flex;
             flex-direction: column;
             gap: 4px;
         }
+    }
+    .awards {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
     }
 }

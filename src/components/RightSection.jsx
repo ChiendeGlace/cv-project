@@ -17,6 +17,7 @@ const RightSection = () => {
                         elit.
                     </p>
                 </div>
+                <button>Add experience +</button>
             </div>
             <div className="referance">
                 <div className="header-div">
@@ -29,6 +30,7 @@ const RightSection = () => {
                         elit.
                     </p>
                 </div>
+                <button>Add referance +</button>
             </div>
             <div className="awards">
                 <div className="header-div">
@@ -41,6 +43,7 @@ const RightSection = () => {
                         elit. Sit aliquam aliquid rerum cumque.
                     </h4>
                 </div>
+                <button>Add awards +</button>
             </div>
         </section>
     );

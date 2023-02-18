@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import Header from './components/Hader';
+import Header from './components/Header';
 import LeftSection from './components/LeftSection';
 import RightSection from './components/RightSection';
 import './app.scss';
@@ -14,19 +14,9 @@ const App = () => {
                 <Header
                     photoSource={photoSrc}
                     setPhotoSrc={setPhotoSrc}
-                    skills={[
-                        'HTML/CSS',
-                        'PYTHON',
-                        'JAVASCRIPT',
-                        'REACT',
-                        'PHOTOSHOP',
-                        'MONGODB',
-                        'pies',
-                        'kot',
-                    ]}
-                    isEditing = {isEditing}
+                    isEditing={isEditing}
                 />
-                <LeftSection />
+                <LeftSection isEditing={isEditing}/>
                 <RightSection />
             </div>
         );

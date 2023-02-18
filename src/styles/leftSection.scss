@@ -4,28 +4,35 @@
     padding: 0em 1em 2em 4em;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 32px;
     h2 {
         font-size: 1.25rem;
-        margin-bottom: 8px;
     }
     h3 {
         font-size: 1.115rem;
     }
+    .about {
+        h2 {
+            margin-bottom: 16px;
+        }
+    }
     .education {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
         .content-div {
             display: flex;
             flex-direction: column;
             gap: 4px;
+            position: relative;
         }
     }
     .contact-us {
         display: flex;
         flex-direction: column;
-        gap: 8px;
-        div {
+        gap: 16px;
+        .contact-div {
             display: flex;
-            justify-content: center;
             align-items: center;
             gap: 8px;
         }
