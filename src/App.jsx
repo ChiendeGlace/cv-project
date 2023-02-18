@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './components/Hader';
 import LeftSection from './components/LeftSection';
@@ -6,25 +6,31 @@ import RightSection from './components/RightSection';
 import './app.scss';
 
 const App = () => {
-    return (
-        <div className='app'>
-            <Header
-                photoSource={'./../../public/man-image.jpg'}
-                fullName="JOHN DOE"
-                position="FRONT-END DEVELOPER"
-                skills={[
-                    'HTML/CSS',
-                    'PYTHON',
-                    'JAVASCRIPT',
-                    'REACT',
-                    'PHOTOSHOP',
-                    'MONGODB',
-                ]}
-            />
-            <LeftSection />
-            <RightSection />
-        </div>
-    );
+    const [photoSrc, setPhotoSrc] = useState('./../../public/man-image.jpg');
+    const [isEditing, setIsEditing] = useState(true);
+    if (isEditing) {
+        return (
+            <div className="app">
+                <Header
+                    photoSource={photoSrc}
+                    setPhotoSrc={setPhotoSrc}
+                    skills={[
+                        'HTML/CSS',
+                        'PYTHON',
+                        'JAVASCRIPT',
+                        'REACT',
+                        'PHOTOSHOP',
+                        'MONGODB',
+                        'pies',
+                        'kot',
+                    ]}
+                    isEditing = {isEditing}
+                />
+                <LeftSection />
+                <RightSection />
+            </div>
+        );
+    }
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -2,7 +2,7 @@ import React from 'react';
 
 const LeftSection = () => {
     return (
-        <section className='left'>
+        <section className="left">
             <div className="about">
                 <div className="header-div">
                     <h2>ABOUT ME</h2>
@@ -18,50 +18,15 @@ const LeftSection = () => {
                     <h2>EDUCATION</h2>
                 </div>
                 <div className="content-div">
-                    <h3>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </h3>
+                    <h3>College of MIT</h3>
                     <h4>
-                        Molestiae, perferendis. Odit eligendi a quis architecto,
-                        veritatis aspernatur voluptatibus sunt sapiente!
-                    </h4>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Cumque expedita numquam corporis sit quos quisquam
-                        itaque omnis. Sequi quo est ipsum quos, tempore fugit
-                        minima dolorum, in dolore, asperiores porro.
-                    </p>
-                </div>
-                <div className="content-div">
-                    <h3>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </h3>
-                    <h4>
-                        Molestiae, perferendis. Odit eligendi a quis architecto,
-                        veritatis aspernatur voluptatibus sunt sapiente!
-                    </h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Placeat maxime, eveniet quibusdam aspernatur quisquam
-                        obcaecati eaque numquam vero in ducimus deserunt neque
-                        omnis inventore impedit ea optio natus, repellendus
-                        ratione? 
-                    </p>
-                </div>
-                <div className="content-div">
-                    <h3>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </h3>
-                    <h4>
-                        Molestiae, perferendis. Odit eligendi a quis architecto,
-                        veritatis aspernatur voluptatibus sunt sapiente!
+                        <em>Department of informatics</em>
                     </h4>
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing
                         elit. Pariatur sapiente labore soluta consequuntur!
                         Suscipit excepturi quaerat repellendus nemo dignissimos
-                        accusamus! Sed, nobis? Sunt, officia reiciendis ab
-                        incidunt laudantium illo veniam. 
+                        accusamus! Sed, nobis?
                     </p>
                 </div>
             </div>

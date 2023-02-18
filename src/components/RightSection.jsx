@@ -2,28 +2,16 @@ import React from 'react';
 
 const RightSection = () => {
     return (
-        <section className='right'>
+        <section className="right">
             <div className="work-experience">
-                <h2>WORK EXPERIENCE</h2>
-                <div className="work-info">
-                    <h3>Lorem ipsum.</h3>
-                    <h4>Lorem ipsum.</h4>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit.
-                    </p>
+                <div className="header-div">
+                    <h2>WORK EXPERIENCE</h2>
                 </div>
                 <div className="work-info">
                     <h3>Lorem ipsum.</h3>
-                    <h4>Lorem ipsum.</h4>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit.
-                    </p>
-                </div>
-                <div className="work-info">
-                    <h3>Lorem ipsum.</h3>
-                    <h4>Lorem ipsum.</h4>
+                    <h4>
+                        <em>Department of informatics</em>
+                    </h4>
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing
                         elit.
@@ -31,12 +19,8 @@ const RightSection = () => {
                 </div>
             </div>
             <div className="referance">
-                <div className="reference-info">
-                    <h4>Lorem ipsum.</h4>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit.
-                    </p>
+                <div className="header-div">
+                    <h2>REFEREANCE</h2>
                 </div>
                 <div className="reference-info">
                     <h4>Lorem ipsum.</h4>
@@ -47,20 +31,15 @@ const RightSection = () => {
                 </div>
             </div>
             <div className="awards">
-                <h2>AWARDS</h2>
-                <div className="awards-info">
-                    <h2>Lorem ipsum.</h2>
-                    <h3>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Sit aliquam aliquid rerum cumque.
-                    </h3>
+                <div className="header-div">
+                    <h2>AWARDS</h2>
                 </div>
                 <div className="awards-info">
-                    <h2>Lorem ipsum.</h2>
-                    <h3>
+                    <h3>Lorem ipsum.</h3>
+                    <h4>
                         Lorem, ipsum dolor sit amet consectetur adipisicing
                         elit. Sit aliquam aliquid rerum cumque.
-                    </h3>
+                    </h4>
                 </div>
             </div>
         </section>

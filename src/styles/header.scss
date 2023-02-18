@@ -40,7 +40,7 @@
                     width: 80%;
                     height: 10px;
                     border: none;
-                    border-radius: 15px;
+                    border-radius: 0;
                     overflow: hidden;
                 }
                 progress::-webkit-progress-bar {
@@ -52,5 +52,14 @@
                 }
             }
         }
+    }
+}
+
+
+.text-input {
+    display: flex;
+    gap: 4px;
+    button {
+        padding: 0 0.5rem;
     }
 }
