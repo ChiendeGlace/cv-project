@@ -1,6 +1,78 @@
 import React, { useState } from 'react';
 import { Input } from './Header';
 
+export const TriInputForm = ({
+    addProperty,
+    input1,
+    setInput1,
+    input2,
+    setInput2,
+    input3,
+    setInput3,
+    formDisplayed,
+    setFormDisplayed,
+    state,
+    setState,
+    label1,
+    label2,
+    label3,
+    handleInput,
+    handleClick,
+}) => {
+    return (
+        <form
+            className="skill-form"
+            onSubmit={(e) => {
+                e.preventDefault();
+                addProperty(state, input1, input2, input3, setState);
+                setInput1('');
+                setInput2('');
+                setInput3('');
+                setFormDisplayed(false);
+            }}
+        >
+            <label htmlFor="title-field">{label1}</label>
+            <input
+                type="text"
+                id="title-field"
+                minLength="3"
+                value={input1}
+                onChange={(e) => handleInput(e, setInput1)}
+                required
+            />
+            <label htmlFor="subtitle-field">{label2}</label>
+            <input
+                type="text"
+                id="subtitle-field"
+                minLength="3"
+                value={input2}
+                onChange={(e) => handleInput(e, setInput2)}
+                required
+            />
+            <label htmlFor="text-field">{label3}</label>
+            <input
+                type="text"
+                id="text-field"
+                minLength="3"
+                value={input3}
+                onChange={(e) => handleInput(e, setInput3)}
+                required
+            />
+            <button>Submit</button>
+            <button
+                onClick={() => {
+                    handleClick(formDisplayed, setFormDisplayed);
+                    setInput1('');
+                    setInput2('');
+                    setInput3('');
+                }}
+            >
+                Cancel
+            </button>
+        </form>
+    );
+};
+
 const LeftSection = ({ isEditing }) => {
     const [about, setAbout] = useState(
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim nisi vitae dictum vehicula. Praesent placerat leo at libero posuere finibus.'
@@ -45,8 +117,8 @@ const LeftSection = ({ isEditing }) => {
             setIsAboutEditing(false);
         }
     };
-    const addProperty = (titleValue, subtitleValue, textValue, func) => {
-        const nextId = Math.max(...education.map((school) => school.id)) + 1;
+    const addProperty = (state, titleValue, subtitleValue, textValue, func) => {
+        const nextId = state.length + 1;
         func((prev) => [
             ...prev,
             {
@@ -118,7 +190,7 @@ const LeftSection = ({ isEditing }) => {
                         onMouseOver={() => handleMouseOver(school.id)}
                         onMouseLeave={() => handleMouseLeave(school.id)}
                     >
-                        {hover == school.id && (
+                        {hover == school.id && isEditing && (
                             <button
                                 className="delete-button"
                                 onClick={() => deleteProperty(school.id)}
@@ -135,71 +207,36 @@ const LeftSection = ({ isEditing }) => {
                 ))}
                 {isEditing && !educationFormDisplayed && (
                     <button
-                        onClick={() =>
+                        onClick={() => {
                             handleClick(
                                 educationFormDisplayed,
                                 setEducationFormDisplayed
-                            )
-                        }
+                            );
+                            setHover(-1);
+                        }}
                     >
                         Add education +
                     </button>
                 )}
                 {isEditing && educationFormDisplayed && (
-                    <form
-                        className="skill-form"
-                        onSubmit={(e) => {
-                            e.preventDefault();
-                            addProperty(
-                                titleValue,
-                                subtitleValue,
-                                textValue,
-                                setEducation
-                            );
-                            setInputValue('');
-                            setEducationFormDisplayed(false);
-                        }}
-                    >
-                        <label htmlFor="title-field">School name</label>
-                        <input
-                            type="text"
-                            id="title-field"
-                            minLength="3"
-                            value={titleValue}
-                            onChange={(e) => handleInput(e, setTitleValue)}
-                            required
-                        />
-                        <label htmlFor="subtitle-field">Additional info</label>
-                        <input
-                            type="text"
-                            id="subtitle-field"
-                            minLength="3"
-                            value={subtitleValue}
-                            onChange={(e) => handleInput(e, setSubtitleValue)}
-                            required
-                        />
-                        <label htmlFor="text-field">Description</label>
-                        <input
-                            type="text"
-                            id="text-field"
-                            minLength="3"
-                            value={textValue}
-                            onChange={(e) => handleInput(e, setTextValue)}
-                            required
-                        />
-                        <button>Submit</button>
-                        <button
-                            onClick={() => {
-                                handleClick(
-                                    educationFormDisplayed,
-                                    setEducationFormDisplayed
-                                );
-                                setInputValue('');
-                            }}
-                        >
-                            Cancel
-                        </button>
-                    </form>
+                    <TriInputForm
+                        addProperty={addProperty}
+                        input1={titleValue}
+                        setInput1={setTitleValue}
+                        input2={subtitleValue}
+                        setInput2={setSubtitleValue}
+                        input3={textValue}
+                        setInput3={setTextValue}
+                        formDisplayed={educationFormDisplayed}
+                        setFormDisplayed={setEducationFormDisplayed}
+                        state={education}
+                        setState={setEducation}
+                        label1="School name"
+                        label2="Additional info"
+                        label3="Description"
+                        handleInput={handleInput}
+                        handleClick={handleClick}
+                    />
                 )}
             </div>
             <div className="contact-us">

@@ -85,7 +85,7 @@ const Header = ({ photoSource, setPhotoSrc, isEditing }) => {
         }
     };
     const addSkill = (name, level) => {
-        const nextId = Math.max(...skills.map((skill) => skill.id)) + 1;
+        const nextId = skills.length + 1;
         setSkills((prev) => [
             ...prev,
             { id: nextId, name: name, level: level },
@@ -157,7 +157,7 @@ const Header = ({ photoSource, setPhotoSrc, isEditing }) => {
                                 onMouseOver={() => handleMouseOver(skill.id)}
                                 onMouseLeave={() => handleMouseLeave(skill.id)}
                             >
-                                {hover == skill.id && (
+                                {hover == skill.id && isEditing && (
                                     <button
                                         className="delete-button"
                                         onClick={() => deleteSkill(skill.id)}
@@ -174,7 +174,14 @@ const Header = ({ photoSource, setPhotoSrc, isEditing }) => {
                         ))}
                     </div>
                     {isEditing && !skillFormDisplayed && (
-                        <button onClick={handleSkillClick}>Add skill +</button>
+                        <button
+                            onClick={() => {
+                                handleSkillClick();
+                                setHover(-1);
+                            }}
+                        >
+                            Add skill +
+                        </button>
                     )}
                     {isEditing && skillFormDisplayed && (
                         <form
